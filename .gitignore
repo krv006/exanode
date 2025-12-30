@@ -12,6 +12,9 @@
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+team_members/
+technologies/
+why_choose_us_icons/
 
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
