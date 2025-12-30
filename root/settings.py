@@ -18,6 +18,8 @@ INSTALLED_APPS = [
     # todo my package
     'apps.apps.AppsConfig',
     # todo third package
+    # 'apps',
+    'rest_framework',
 
 ]
 
