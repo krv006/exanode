@@ -1,5 +1,7 @@
 from pathlib import Path
 
+from root.drf_settings import *
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-ch4&73$&c8t7m-8qin#ykxx$v70(3o10kwgvgls_5a2-^lixvt'
@@ -18,8 +20,8 @@ INSTALLED_APPS = [
     # todo my package
     'apps.apps.AppsConfig',
     # todo third package
-    # 'apps',
     'rest_framework',
+    'drf_spectacular',
 
 ]
 
