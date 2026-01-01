@@ -1,1 +1,1 @@
-from apps.serializers.contact import *
+from apps.serializers.contact_serializer import *

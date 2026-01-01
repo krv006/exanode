@@ -15,7 +15,8 @@ class Contact(Model):
 
 class TelegramBot(Model):
     telegram_token = CharField(max_length=500)
-    chat_id = CharField(max_length=100)
+    group_chat_id = CharField(max_length=100)
+    admin_chat_id = CharField(max_length=100)
 
     def __str__(self):
         return f'{self.telegram_token}'

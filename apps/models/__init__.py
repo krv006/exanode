@@ -1,1 +1,1 @@
-from apps.models.contact import *
+from apps.models.contact_model import *

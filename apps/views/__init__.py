@@ -1,1 +1,1 @@
-from apps.views.contact import *
+from apps.views.contact_view import *
