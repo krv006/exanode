@@ -2,7 +2,7 @@ from rest_framework.generics import ListCreateAPIView
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
 from apps.models import Contact
-from apps.serilizer import ContactModelSerializer
+from apps.serializers import ContactModelSerializer
 
 
 class ContactListCreateView(ListCreateAPIView):
