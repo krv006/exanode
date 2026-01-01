@@ -1,7 +1,7 @@
 from django.db.models import Model, CharField, TextField
 
 
-class Contact(Model):
+class ContactUs(Model):
     full_name = CharField(max_length=500)
     email = CharField(max_length=500)
     subject = CharField(max_length=250)
@@ -20,3 +20,10 @@ class TelegramBot(Model):
 
     def __str__(self):
         return f'{self.telegram_token}'
+
+
+class Contact(Model):
+    email = CharField(max_length=500)
+    phone_number = CharField(max_length=250)
+    address = CharField(max_length=500)
+    business_hours = CharField(max_length=500)

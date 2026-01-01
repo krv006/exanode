@@ -2,13 +2,13 @@ from rest_framework.generics import ListCreateAPIView
 from rest_framework.permissions import AllowAny
 
 from apps.models import Contact
-from apps.serializers import ContactModelSerializer
+from apps.serializers import ContactUsModelSerializer, ContactModelSerializer
 from apps.utils import send_telegram_message
 
 
-class ContactListCreateView(ListCreateAPIView):
+class ContactUsListCreateView(ListCreateAPIView):
     queryset = Contact.objects.all()
-    serializer_class = ContactModelSerializer
+    serializer_class = ContactUsModelSerializer
     permission_classes = (AllowAny,)
 
     def perform_create(self, serializer):
@@ -25,3 +25,9 @@ class ContactListCreateView(ListCreateAPIView):
         )
 
         send_telegram_message(message)
+
+
+class ContactListCreateAPIView(ListCreateAPIView):
+    queryset = Contact.objects.all()
+    serializer_class = ContactModelSerializer
+    permission_classes = (AllowAny,)
