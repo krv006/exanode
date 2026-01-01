@@ -1,3 +1,4 @@
+from drf_spectacular.utils import extend_schema
 from rest_framework.generics import ListCreateAPIView
 from rest_framework.permissions import AllowAny
 
@@ -5,7 +6,7 @@ from apps.models import Contact
 from apps.serializers import ContactUsModelSerializer, ContactModelSerializer
 from apps.utils import send_telegram_message
 
-
+@extend_schema(tags=["contact-us"])
 class ContactUsListCreateView(ListCreateAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactUsModelSerializer
@@ -26,7 +27,7 @@ class ContactUsListCreateView(ListCreateAPIView):
 
         send_telegram_message(message)
 
-
+@extend_schema(tags=["contact"])
 class ContactListCreateAPIView(ListCreateAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactModelSerializer
