@@ -51,7 +51,7 @@ ln -s /etc/nginx/sites-available/exanode /etc/nginx/sites-enabled/
 nginx -t
 
 
-certbot --nginx -d imtihon.lms-impulse.uz
+certbot --nginx -d exanode.coffeecrm.uz
 certbot --nginx -d qabul.lms-impulse.uz
 
 
